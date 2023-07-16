@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Dark View",
-  "description": "make website screen dark to protect your eyes",
-  "version": "1.0.2",
+  "name": "Gray View",
+  "description": "make website screen gray to protect your eyes",
+  "version": "1.0.3",
   "icons": {
     "16": "images/icon-96x96.png",
     "32": "images/icon-96x96.png",
