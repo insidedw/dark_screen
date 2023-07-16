@@ -1,6 +1,6 @@
 # Gray View Chrome Extension
 
-![Gray View Chrome Extension](/path/to/extension-icon.png)
+![Gray View Chrome Extension](https://ik.imagekit.io/crso3ztbifq/mustardseed/icon-96x96_UuKg7vowp.png?updatedAt=1674555273704)
 
 The Gray View Chrome Extension is a simple yet powerful tool that allows you to view websites in grayscale mode. This extension helps users to focus on the content of web pages by removing distracting colors.
 Some people may love this if they don't like both light and dark mode.
@@ -14,7 +14,7 @@ To install the Gray View Chrome Extension, follow these steps:
 3. Search for "Gray View" in the search bar.
 4. Click on the "Add to Chrome" button next to the Gray View extension.
 5. A confirmation dialog will appear. Click on "Add extension" to proceed.
-6. The extension will be installed and a small gray icon will appear in your browser's toolbar.
+6. The extension will be installed and a small smile emoji icon will appear in your browser's toolbar.
 
 ## Usage
 
