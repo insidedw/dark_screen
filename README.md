@@ -38,7 +38,7 @@ The Gray View Chrome Extension also offers some customization options to enhance
 
 In the options page, you can adjust the following settings:
 
-- **Saturation**: Control the level of color saturation in the grayscale mode.
+- **Enable Grayscale**: Enable or disable the grayscale mode.
 - **Contrast**: Adjust the contrast of the grayscale view.
 - **Enable Shortcut**: Enable or disable the keyboard shortcut to toggle the grayscale mode.
 
