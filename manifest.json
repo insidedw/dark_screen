@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Gray View",
   "description": "make website screen gray to protect your eyes",
-  "version": "1.0.3",
+  "version": "0.0.4",
   "icons": {
     "16": "images/icon-96x96.png",
     "32": "images/icon-96x96.png",
@@ -10,7 +10,7 @@
     "96": "images/icon-96x96.png",
     "128": "images/icon-96x96.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": "images/icon-96x96.png",
     "default_popup": "popup.html"
   },
