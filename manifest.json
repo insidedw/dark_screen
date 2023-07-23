@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Gray View",
+  "name": "Gray Cover",
   "description": "make website screen gray to protect your eyes",
   "version": "0.0.4",
   "icons": {
@@ -19,5 +19,10 @@
       "matches": ["<all_urls>"],
       "js": ["index.js"]
     }
-  ]
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab","scripting", "storage"]
+
 }

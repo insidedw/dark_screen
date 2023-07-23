@@ -5,3 +5,15 @@ body {
 .container {
     margin: 1rem;
 }
+
+.row {
+    width: 100%;
+}
+
+.row.first {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: calc(1.2rem + 1vw);
+}
