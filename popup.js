@@ -15,14 +15,12 @@
             });
         }
     });
-
 })();
 
 document.getElementById("grayCoverRange").addEventListener("change", function (e) {
     chrome.tabs.query({currentWindow: true, active: true}, function (tabs) {
         var activeTab = tabs[0];
         chrome.tabs.sendMessage(activeTab.id, {"message": "range_gray_cover", "range": e.target.value});
-
         chrome.storage.sync.set({'range': e.target.value}).then(() => {});
     });
 });
