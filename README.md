@@ -2,8 +2,9 @@
 
 ![Gray Cover Chrome Extension](https://ik.imagekit.io/crso3ztbifq/mustardseed/icon-96x96_UuKg7vowp.png?updatedAt=1674555273704)
 
-The Gray Cover Chrome Extension is a simple yet powerful tool that allows you to view websites in grayscale mode. This extension helps users to focus on the content of web pages by removing distracting colors.
+[The Gray Cover Chrome Extension](https://chromewebstore.google.com/detail/gray-cover/higbmkinmbaacgpocohpepceahemanai) is a simple yet powerful tool that allows you to view websites in grayscale mode. This extension helps users to focus on the content of web pages by removing distracting colors.
 Some people may love this if they don't like both light and dark mode.
+
 
 ## Installation
 
@@ -63,7 +64,7 @@ Please ensure that your contributions align with the project's coding standards 
 If you have any questions, feedback, or need support regarding the Gray Cover Chrome Extension, you can reach out to us through the following channels:
 
 - Email: [insidedw@gmail.com](mailto:insidedw@gmail.com)
-- GitHub Issues: [https://github.com/insidedw/grayview/issues](https://github.com/insidedw/grayview/issues)
+- Support: [https://graycover-ce.tistory.com/](https://graycover-ce.tistory.com/)
 
 We appreciate your feedback and will do our best to assist you.
 
