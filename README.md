@@ -25,7 +25,7 @@ To use the extension:
 
 1. Open a web page that you want to view in grayscale.
 2. Click on the gray icon in the browser's toolbar.
-3. The web page will instantly switch to grayscale mode, removing all colors.
+3. Adjust a range from white to dark gray. 
 4. To switch back to the normal view, click the gray icon again.
 
 The extension provides a convenient way to toggle the grayscale mode on and off, allowing you to quickly switch between regular and Gray Covers.
