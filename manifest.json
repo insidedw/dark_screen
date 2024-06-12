@@ -30,8 +30,7 @@
         "default": "Ctrl+Shift+0",
         "mac": "Command+Shift+0"
       },
-      "description": "toggle dark-view extension",
-      "global": true
+      "description": "Toggle the Gray Cover on and off."
     }
   }
 }
