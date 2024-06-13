@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Gray Cover",
-  "description": "make website screen gray to protect your eyes",
-  "version": "0.0.1",
+  "description": "Make website screen gray to protect your eyes",
+  "version": "0.0.2",
   "icons": {
     "16": "images/icon-96x96.png",
     "32": "images/icon-96x96.png",
