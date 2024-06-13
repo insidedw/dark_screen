@@ -27,8 +27,8 @@
   "commands": {
     "on-off": {
       "suggested_key": {
-        "default": "Ctrl+Shift+0",
-        "mac": "Command+Shift+0"
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
       },
       "description": "Toggle the Gray Cover on and off."
     }
