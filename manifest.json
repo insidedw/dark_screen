@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Gray Cover",
-  "description": "make website screen gray to protect your eyes",
+  "description": "Make website screen gray to protect your eyes",
   "version": "0.0.1",
   "icons": {
     "16": "images/icon-96x96.png",
@@ -27,11 +27,10 @@
   "commands": {
     "on-off": {
       "suggested_key": {
-        "default": "Ctrl+Shift+0",
-        "mac": "Command+Shift+0"
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
       },
-      "description": "toggle dark-view extension",
-      "global": true
+      "description": "Toggle the Gray Cover on and off."
     }
   }
 }

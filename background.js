@@ -23,9 +23,7 @@ const handleBadge = async (range, isReversed) => {
 }
 
 chrome.commands.onCommand.addListener(async (command) => {
-    console.log(command)
     if (command === 'on-off') {
-
         const {range: currentRangeValue = 0} = await chrome.storage.sync.get(["range"])
         const {range: savedRangeValue = 0} = await chrome.storage.local.get(["range"])
 
