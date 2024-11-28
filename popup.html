@@ -16,7 +16,8 @@
 <body>
 <div class="container">
     <div class="row first">
-        <h1>Gray Cover</h1>
+        <div class="col-9"><h1>Gray Cover</h1></div>
+        <div class="col-3"><a class="link-underline-opacity-100" target="_blank" href="https://graycover-ce.tistory.com/3">Tip</a></div>
     </div>
     <div class="row">
         <div class="col">
@@ -25,9 +26,10 @@
                     <label for="grayCoverRange" class="form-label">Range</label>
                     <input type="range" min="0" max="80" class="form-range" id="grayCoverRange" value="0">
                 </div>
-                <div class="mb-3">
-                    <a class="link-underline-opacity-100" target="_blank" href="https://graycover-ce.tistory.com/3">Tip</a>
-                </div>
+                <div class="mb-3 form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switchDomain">
+                    <label class="form-check-label" for="switchDomain">Disable this site</label>
+                  </div>
             </form>
         </div>
     </div>
