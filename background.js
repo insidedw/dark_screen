@@ -56,3 +56,4 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
     const {range = 0} = request
     await handleBadge(range, false)
 });
+
