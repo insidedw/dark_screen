@@ -1,15 +1,15 @@
 (function () {
-  // sync when popup is open. it fires first when initialized
-  chrome.storage.sync.get(["range"]).then((result) => {
-    if (result.range >= 0) {
-      document.getElementById("grayCoverRange").value = result.range;
-      chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-        var activeTab = tabs[0];
-        chrome.tabs.sendMessage(activeTab.id, {
-          message: "range_gray_cover",
-          range: result.range,
-        });
-      });
+  let currentHostname = "";
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    if (tabs.length > 0) {
+      const currentTab = tabs[0]; // 현재 활성 탭
+      const currentUrl = currentTab.url; // 활성 탭의 URL
+      try {
+        const url = new URL(currentUrl);
+        currentHostname = url.hostname;
+      } catch (e) {}
+    } else {
+      console.log("No active tab found.");
     }
   });
 
@@ -20,34 +20,32 @@
     }
   });
 
+  const saveRange = (range) => {
+    chrome.tabs.query(
+      { currentWindow: true, active: true },
+      async function (tabs) {
+        var activeTab = tabs[0];
+        chrome.tabs.sendMessage(activeTab.id, {
+          message: "range_gray_cover",
+          range,
+          currentHostname,
+        });
+        chrome.runtime.sendMessage({ range });
+        await chrome.storage.sync.set({ range });
+      }
+    );
+  };
+
   document
     .getElementById("grayCoverRange")
     .addEventListener("change", async function (e) {
-      chrome.tabs.query(
-        { currentWindow: true, active: true },
-        async function (tabs) {
-          var activeTab = tabs[0];
-          chrome.tabs.sendMessage(activeTab.id, {
-            message: "range_gray_cover",
-            range: e.target.value,
-          });
-          chrome.runtime.sendMessage({ range: e.target.value });
-          await chrome.storage.sync.set({ range: e.target.value });
-        }
-      );
+      saveRange(e.target.value);
     });
 
-  let currentHostname = "";
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    if (tabs.length > 0) {
-      const currentTab = tabs[0]; // 현재 활성 탭
-      console.log("currentTab", currentTab);
-      const currentUrl = currentTab.url; // 활성 탭의 URL
-      const url = new URL(currentUrl);
-      currentHostname = url.hostname;
-    } else {
-      console.log("No active tab found.");
-    }
+  chrome.storage.local.get(["savedDomains"], (result) => {
+    const savedDomains = result.savedDomains || [];
+    const contains = savedDomains.includes(currentHostname);
+    document.getElementById("switchDomain").checked = contains;
   });
 
   document
@@ -61,6 +59,9 @@
             { savedDomains: savedDomains.filter((e) => e !== currentHostname) },
             () => {
               console.log(`${currentHostname} removed successfully!`);
+              saveRange(0); //reset 0
+              document.getElementById("grayCoverRange").value = 0;
+              document.getElementById("grayCoverRange").disabled = false;
             }
           );
         } else {
@@ -68,6 +69,9 @@
             { savedDomains: [...savedDomains, currentHostname] },
             () => {
               console.log(`${currentHostname} saved successfully!`);
+              saveRange(0); //reset 0
+              document.getElementById("grayCoverRange").value = 0;
+              document.getElementById("grayCoverRange").disabled = true;
             }
           );
         }
